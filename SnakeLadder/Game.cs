@@ -47,7 +47,10 @@ namespace SnakeLadder
                 }
                 Console.WriteLine($"Player Position: ------> {playerPosition}");
             }
-            Console.WriteLine($"Player Position: -----> {playerPosition}");
+            if (this.playerPosition == WINNING_POSITION)
+            {
+                Console.WriteLine($"Player Position: -----> {playerPosition}");
+            }
         }
     }
 }
