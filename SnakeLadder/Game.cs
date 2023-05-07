@@ -8,6 +8,7 @@ namespace SnakeLadder
 {
     public class Game
     {
+        const int NO_PLAY = 0, LADDER = 1, SNAKE = 2;
         int playerPosition = 0;
         int count = 0;
 
@@ -19,6 +20,21 @@ namespace SnakeLadder
             Console.WriteLine($"Die Roll: -----> {num}");
             count++;
             return num;
+        }
+        public void Play()
+        {
+            int option = random.Next(0,3);
+            switch (option)
+            {
+                case NO_PLAY:
+                    break; 
+                case LADDER:
+                    this.playerPosition += DieRoll();
+                    break;
+                case SNAKE:
+                    this.playerPosition -= DieRoll();
+                    break;
+            }
         }
     }
 }
