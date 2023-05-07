@@ -50,6 +50,7 @@ namespace SnakeLadder
             if (this.playerPosition == WINNING_POSITION)
             {
                 Console.WriteLine($"Player Position: -----> {playerPosition}");
+                Console.WriteLine($"Die Count: -----> {count}");
             }
         }
     }
